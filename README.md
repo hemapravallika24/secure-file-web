@@ -23,9 +23,7 @@ Start the server:
 
 python app.py
 Open http://127.0.0.1:5000/ in your browser.
-## 🌐 Live Demo
 
-[🔗 Click here to see the UI on GitHub Pages : http://127.0.0.1:5000/](https://hemapravallika24.github.io/secure-file-web/)
 
 # Secure File Sharing Web App 🔒
 
