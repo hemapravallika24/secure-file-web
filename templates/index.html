@@ -74,6 +74,12 @@
       background: #e8f5e9;
       border: 1px solid #81c784;
     }
+    .error {
+      color: #c62828;
+      background: #ffebee;
+      border: 1px solid #ef5350;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -88,6 +94,8 @@
       <p class="message success">✅ File encrypted successfully!</p>
     {% elif status == 'decrypted' %}
       <p class="message success">✅ File decrypted successfully!</p>
+    {% elif status == 'error' %}
+      <p class="message error">❌ Decryption failed. Make sure the file is correct!</p>
     {% endif %}
 
     <form action="/encrypt" method="post" enctype="multipart/form-data">
@@ -105,6 +113,13 @@
       <br>
       <button type="submit">Decrypt & Download</button>
     </form>
+    <script>
+  setTimeout(() => {
+    const message = document.querySelector(".message");
+    if (message) message.style.display = "none";
+  }, 3000);
+</script>
+
   </div>
 </body>
 </html>
